@@ -25,6 +25,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
     * Request의 종류에 따라 Console Kernel인지 HTTP Kernel인지가 결정
 * HTTP Kernel은 `app/Http/Kernel.php`에 정의
     * `Illuminate\Contracts\Http\Kernel::class`에 bind된 Singleton Service Container
+    
     ~~~
     <?php
     /* bootstrap/app.php */
@@ -55,6 +56,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
     
 * HTTP Kernel은 `Illuminate/Foundation/Http/Kernel`을 상속
     * Request가 처리되기 전에 수행되는 bootstrapper 클래스들이 **bootstrappers** 배열에 정의 -> **bootstrap** 메소드 실행
+    
         ~~~
         /* Illuminate/Foundation/Http/Kernel.php */
         
@@ -103,6 +105,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
         
     * middleware 리스트 정의
         * HTTP session 작성 및 읽기, maintenance mode 여부 확인, CSRF token 처리...
+        
         ~~~
         /* app/Http/Kernel.php */
         
@@ -128,6 +131,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
 * HTTP Kernel의 **handle** 메소드 -> 전달된 Request에 대해 Response를 생성
 * bootstrap 과정 및 Service Provider 등록이 완료되면 Request는 Router에 의해 특정 route 또는 controller로 전달
     * 전달되는 route에 따라 route specific middleware 실행
+    
     ~~~
     /* public/index.php */    
 
