@@ -3,7 +3,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
 
 ## 1. Request 진입
 * 웹 서버(apache / nginx)의 설정에 의해 HTTP request가 Laravel의 `public/index.php` 파일로 전달
-* Composer에 의해 생성된 autoloader definition 로드 (namespace, class, file...)
+* Composer에 의해 생성된 autoloader definition 로드 (namespace, class...)
 * `bootstrap/app.php`에 정의된 Laravel application의 instance **(Service Container)** 를 생성
     ~~~
     /* public/index.php */    
