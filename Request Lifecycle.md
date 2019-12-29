@@ -196,7 +196,7 @@ Laravel Framework에서 HTTP Request를 처리하는 과정의 개략적인 흐�
 1) HTTP Request에 의해 `public/index.php` 실행
 2) Laravel application instance 생성(`bootstrap/app.php`)
 3) application 생성 시 HTTP Kernel을 bind
-4) Kernel 생성, Kernel내에 middleware 리스트 등록
+4) Kernel 생성(make), Kernel내에 middleware 리스트 등록
 5) Request를 parameter로 Kernel의 handle 메소드 수행
 6) Request 처리 전 bootstrapping 수행
 7) Request를 router로 전달, route 또는 controller로 전달하여 처리 수행
